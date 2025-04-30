@@ -26,7 +26,7 @@ export default defineConfig(({ command }) => {
           entryFileNames: 'commonHelpers.js',
         },
       },
-      outDir: '../stp-tripleclickmatch.com',
+      outDir: '../dist',
       emptyOutDir: true,
     },
     plugins: [
