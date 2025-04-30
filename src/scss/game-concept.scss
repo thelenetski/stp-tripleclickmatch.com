@@ -1,0 +1,106 @@
+.gameDescrWrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: linear-gradient(180deg, #091321, #0043a6);
+  position: relative;
+  overflow: hidden;
+
+  @include media(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 141px;
+  }
+}
+
+.gameDescrContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include media(desktop) {
+    width: 556px;
+    align-items: flex-start;
+    order: 2;
+  }
+}
+
+.gameDescrTitle {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+.gameDescrSubtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  margin-top: 16px;
+
+  @include media(desktop) {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: left;
+  }
+}
+
+.gameDescrText {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  margin-top: 40px;
+
+  @include media(desktop) {
+    margin-top: 60px;
+  }
+}
+
+.gameConceptImg {
+  width: 100%;
+  margin-top: 36px;
+  position: relative;
+  z-index: 10;
+
+  @include media(desktop) {
+    width: 654px;
+    margin-top: 0;
+    margin-bottom: 0;
+    order: 1;
+  }
+}
+
+.gameConceptBgUp {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include media(desktop) {
+    width: 508px;
+  }
+}
+
+.gameConceptBgDown {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  z-index: 1;
+
+  @include media(desktop) {
+    left: 0;
+  }
+}

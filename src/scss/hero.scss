@@ -1,85 +1,183 @@
 .heroWrap {
   display: flex;
   flex-direction: column;
-  padding-top: 95px;
+  align-items: center;
+  margin-top: 96px;
+  padding-top: 12px;
   overflow: hidden;
   background: url('/img/hero-bg.png') no-repeat;
-  background-position: 50% 50%;
   background-size: cover;
   position: relative;
+
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    background: url('/img/hero-bg-desktop.png') 50% 50% no-repeat;
+    background-size: cover;
+    margin-top: 79px;
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+}
+
+.heroLogoBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media(desktop) {
+    width: 556px;
+  }
 }
 
 .heroTitle {
-  width: 242px;
+  width: 100%;
 
   @include media(desktop) {
-    width: 415px;
-    margin-top: 33px;
-    margin-left: 95px;
   }
 }
 
 .heroSubtitle {
-  margin-top: 5px;
-  font-family: var(--second-family);
-  font-weight: 600;
-  font-size: 26px;
-  color: #fbfbfb;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
-  text-wrap: balance;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
 
   @include media(desktop) {
-    width: 477px;
     font-size: 40px;
-    margin-top: 36px;
-    margin-left: 191px;
+    line-height: 48px;
+  }
+}
+
+.heroDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+
+  @include media(desktop) {
+    width: 85%;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
 .heroLink {
-  width: 136px;
-  height: 46px;
+  width: 335px;
+  height: 84px;
+  display: block;
   margin-top: 12px;
   background-image: image-set(
-    url('/img/gp-img.png') 1x,
-    url('/img/gp-img@2x.png') 2x
+    url('/img/hero-button.png') 1x,
+    url('/img/hero-button@2x.png') 2x
   );
-  transform: translateX(-3px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 36px;
 
   @include media(desktop) {
-    width: 265px;
-    height: 62px;
-    margin-top: 40px;
-    margin-bottom: 55px;
-    margin-left: 191px;
-    background-image: image-set(
-      url('/img/gp-img-desktop.png') 1x,
-      url('/img/gp-img-desktop@2x.png') 2x
-    );
+    width: 360px;
+    height: 88px;
+    margin-top: 44px;
   }
 }
 
-.heroCatBox {
+.heroPhoneBox {
   width: 100%;
-  height: 238px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 
   @include media(desktop) {
-    position: absolute;
-    bottom: 230px;
-    right: 0;
+    width: 50%;
+    margin-top: 0;
   }
 }
 
-.heroCat {
-  width: 224px;
-  position: absolute;
-  right: -55px;
-  top: -15px;
+.heroPhone {
+  width: 193px;
+  margin-right: -40px;
 
   @include media(desktop) {
-    width: 416px;
-    right: 110px;
-    top: 0;
+    width: 455px;
+    margin-right: -150px;
+  }
+}
+
+.heroApple {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  animation: pulse 4s infinite ease-in-out;
+  animation-duration: 4s;
+  animation-delay: 0s;
+
+  @include media(desktop) {
+    width: 229px;
+    top: 40px;
+    left: 0px;
+  }
+}
+
+.heroRaspberry {
+  width: 67px;
+  position: absolute;
+  top: 22px;
+  right: 70px;
+  animation: pulse 4s infinite ease-in-out;
+  animation-duration: 5s;
+  animation-delay: 1s;
+
+  @include media(desktop) {
+    width: 151px;
+    top: 60px;
+    right: 60px;
+  }
+}
+.heroBall {
+  width: 100px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  animation: pulse 4s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 0.5s;
+
+  @include media(desktop) {
+    width: 230px;
+    bottom: -20px;
+    left: -20px;
+  }
+}
+.heroGrapes {
+  width: 200px;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  animation: pulse 4s infinite ease-in-out;
+  animation-duration: 5.5s;
+  animation-delay: 1.5s;
+
+  @include media(desktop) {
+    width: 380px;
+    bottom: 20px;
+    right: -40px;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1) translateY(0%);
+  }
+  50% {
+    transform: scale(1.15) translateY(-10%);
   }
 }

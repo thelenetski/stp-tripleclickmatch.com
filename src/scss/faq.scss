@@ -1,60 +1,76 @@
 .faq-section {
-  background-color: #110a16;
+  background: url('/img/faq-bg-mobile.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include media(desktop) {
+    background: url('/img/faq-bg.png') center/cover no-repeat;
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
 }
 
 .accordion-wrap {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: #d58d00;
-  border-radius: 4px;
-  padding: 4px 3px;
-  height: 40px;
+  background: #ffffff;
+  padding: 28px 20px;
+  border: 1px solid #eaf3f8;
 
   @include media(desktop) {
-    height: 63px;
-    border-radius: 10px;
   }
 }
 
+.faq-item.active .accordion-wrap {
+  background: #f3f7fb;
+  border-bottom: none;
+}
+
 .faq-title {
-  font-weight: 600;
-  font-size: 40px;
-  color: #d58d00;
-  margin-top: 32px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+  margin-bottom: 37px;
 
   @include media(desktop) {
-    font-size: 40px;
+    font-size: 52px;
+    line-height: 60px;
+    margin-bottom: 60px;
   }
 }
 
 .faq {
   font-weight: 600;
-  font-size: 12px;
-  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1d1d1d;
 
   @include media(desktop) {
-    font-size: 32px;
+    font-size: 20px;
   }
+}
+
+.faq-item.active .faq {
+  color: #024fc0;
 }
 
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 45px;
+  gap: 2px;
+  margin-top: 40px;
 
   @include media(desktop) {
-    width: 679px;
-    margin: 40px auto;
+    width: 1064px;
+    margin-top: 0;
+    margin: 0 auto;
   }
 }
-
-
 
 .accordion-btn {
   background: transparent;
@@ -68,34 +84,35 @@
   transition: transform 0.3s ease-in-out;
 
   @include media(desktop) {
-    width: 43px;
-    height: 43px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 .faq-content {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   opacity: 0;
-   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-
-
+  background: #f3f7fb;
+  padding-left: 20px;
+  transition: 0.3s ease-in-out;
   font-weight: 400;
-  font-size: 10px;
-  color: #fbfbfb;
-
-  @include media(desktop) {
-    font-size: 18px;
-    margin-top: 12px;
-  }
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d1d1d;
 }
 
 .faq-item.active .faq-content {
-  max-height: 100px;
+  height: auto;
   opacity: 1;
-  padding-top: 8px;
+  padding: 0 20px 28px 20px;
 }
 
-.faq-item.active .arrow-down {
-  transform: rotate(180deg);
+.faq-arrow {
+  transition: 0.3s ease-in-out;
+}
+
+.faq-item.active .faq-arrow {
+  transform: rotate(90deg);
+  color: #024fc0;
 }

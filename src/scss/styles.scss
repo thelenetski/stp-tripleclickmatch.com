@@ -1,10 +1,11 @@
 @import './header.scss';
 @import './hero.scss';
-@import './benefits.scss';
-@import './game-description.scss';
-@import './main-characters.scss';
-@import './gallery.scss';
+@import './key-features.scss';
+@import './game-concept.scss';
+@import './matchable-things.scss';
+@import './satisfaction.scss';
 @import './faq.scss';
+@import './cta.scss';
 @import './reviews.scss';
 @import './footer.scss';
 @import './cookies-policy.scss';
@@ -12,24 +13,12 @@
 @import './terms-and-conditions.scss';
 @import './privacy-policy.scss';
 
-// @font-face {
-//   font-family: 'Inter';
-//   src: url('../fonts/Inter_18pt-Regular.ttf');
-// }
-
-// @font-face {
-//   font-family: 'Playfair Display';
-//   src: url('../fonts/PlayfairDisplay-Regular.ttf');
-// }
-
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-  --font-family: 'Inter', sans-serif;
-  --second-family: 'Playfair Display', sans-serif;
-  --main-background: #1e1e1e;
+  --font-family: 'Krub', sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,7 +29,8 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--main-background);
+  color: #ffffff;
+  background: #1d3f72;
 }
 
 h1,
@@ -49,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--second-family);
+  font-family: var(--font-family);
 }
 
 html {

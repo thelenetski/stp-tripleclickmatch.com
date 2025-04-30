@@ -1,23 +1,34 @@
 .privacy-policy-section {
-  background-color: #110a16;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 156px;
+
+  @include media(desktop) {
+    padding-top: 159px;
+  }
 }
 
 .privacy-title {
   font-weight: 600;
-  font-size: 26px;
-  color: #d58d00;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #27282b;
+  margin-bottom: 40px;
 
   @include media(desktop) {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 36px;
+    margin-bottom: 60px;
   }
 }
 
 .header-text {
-  color: #d58d00;
-  margin-bottom: 16px;
+  font-family: 'Krub', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: justify;
+  color: #27282b;
 
   @include media(desktop) {
     font-size: 22px;
@@ -26,19 +37,35 @@
 }
 
 .policy-text-wrap {
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Krub', sans-serif;
   margin-bottom: 40px;
+  color: #27282b;
+}
+
+.regular-text {
+  font-family: 'Krub', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #27282b;
+  text-align: justify;
+}
+
+.bold-text {
+  font-family: 'Krub', sans-serif;
 }
 
 .list-info {
-  color: #fbfbfb;
+  font-family: 'Krub', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  color: #27282b;
   list-style-type: disc;
-  font-size: 12px;
+  font-size: 20px;
   margin-left: 26px;
-
-  @include media(desktop) {
-    font-size: 18px;
-  }
 }
 
 .space {

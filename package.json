@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-vite-template",
+  "name": "match-triple-find",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/stp-7979/",
+    "build": "vite build --base=/stp-tripleclickmatch.com/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview",
     "predeploy": "npm run build",
@@ -20,7 +20,7 @@
     "vite": "^4.5.2",
     "vite-plugin-image-optimizer": "^1.1.8"
   },
-  "author": "Andrii Kyrylenko <z9877969@gmail.com>",
+  "author": "Viktor Zelenetski <thelenetski@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "accordion-js": "^3.4.0",

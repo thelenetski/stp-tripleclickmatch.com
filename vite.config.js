@@ -11,6 +11,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    base: './',
     build: {
       sourcemap: true,
 
@@ -25,26 +26,27 @@ export default defineConfig(({ command }) => {
           entryFileNames: 'commonHelpers.js',
         },
       },
-      outDir: '../dist',
+      outDir: '../stp-tripleclickmatch.com',
+      emptyOutDir: true,
     },
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
-      ViteImageOptimizer({
-        exclude: /^sprite.svg$/,
-        png: {
-          quality: 60,
-        },
-        jpeg: {
-          quality: 60,
-        },
-        jpg: {
-          quality: 60,
-        },
-        webp: {
-          quality: 60,
-        },
-      }),
+      // ViteImageOptimizer({
+      //   exclude: /^sprite.svg$/,
+      //   png: {
+      //     quality: 60,
+      //   },
+      //   jpeg: {
+      //     quality: 60,
+      //   },
+      //   jpg: {
+      //     quality: 60,
+      //   },
+      //   webp: {
+      //     quality: 60,
+      //   },
+      // }),
     ],
     css: {
       preprocessorOptions: {

@@ -1,13 +1,30 @@
 <section>
   <div class="cookiesWrap container">
-    <h4 class="cookiesTitle">Cookies Policy</h4>
-    <p class="cookiesMsg">
-       We use cookies to improve your experience on our website. By browsing
-      this website, you agree to our use of cookies.
-    </p>
+    <button class="cookiesClose">
+      <svg width="24" height="24">
+        <use href="./sprite.svg#close" />
+      </svg>
+    </button>
+    <div class="cookiesContent">
+      <img src="./img/cookies.png" alt="cookies image" class="cookiesImg" />
+      <p class="cookiesMsg">
+         Our website use cookies. By continuing, we assume your permission to
+        deploy cookies as detailed in our
+        <a
+          href="./privacy-policy.html"
+          style="color: #4a3aff; word-break: break-word"
+          >Privacy Policy</a
+        >.
+      </p>
+    </div>
     <div class="cookiesControl">
-      <button class="cookiesAccept">Accept cookies</button>
-      <button class="cookiesDecline">Decline cookies</button>
+      <button class="cookiesAccept">
+        <svg style="margin-right: 5px" width="14" height="15">
+          <use href="./sprite.svg#union" />
+        </svg>
+        Accept cookies
+      </button>
+      <button class="cookiesDecline">Decline</button>
     </div>
   </div>
 </section>

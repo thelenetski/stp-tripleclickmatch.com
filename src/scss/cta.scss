@@ -1,0 +1,96 @@
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: linear-gradient(180deg, #091321 0%, #0043a6 100%);
+  position: relative;
+  overflow: hidden;
+
+  @include media('desktop') {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.cta-title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+  z-index: 10;
+
+  @include media('desktop') {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+.cta-subtitle {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  margin-top: 28px;
+  z-index: 10;
+
+  @include media('desktop') {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
+
+.cta-link {
+  width: 100%;
+  height: 84px;
+  background-image: image-set(
+    url('/img/cta-button.png') 1x,
+    url('/img/cta-button@2x.png') 2x
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 40px;
+
+  @include media('desktop') {
+    width: 434px;
+    // height: 80px;
+    margin-top: 48px;
+    background-image: image-set(
+      url('/img/cta-button-desktop.png') 1x,
+      url('/img/cta-button-desktop@2x.png') 2x
+    );
+  }
+}
+
+.cta-link:hover {
+  cursor: pointer;
+}
+
+.grapes {
+  width: 170px;
+  position: absolute;
+  top: 25%;
+  left: -12%;
+  transform: rotate(45deg);
+
+  @include media('desktop') {
+    width: 200px;
+    top: auto;
+    bottom: -3%;
+    left: 6%;
+  }
+}
+
+.raspberry {
+  width: 100px;
+  position: absolute;
+  top: 5%;
+  right: 0;
+
+  @include media('desktop') {
+    width: 152px;
+    top: 10%;
+    right: 3%;
+  }
+}

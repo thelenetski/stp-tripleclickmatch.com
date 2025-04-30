@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const accept = document.querySelector('.cookiesAccept');
   const decline = document.querySelector('.cookiesDecline');
+  const close = document.querySelector('.cookiesClose');
   const container = document.querySelector('.cookiesWrap');
 
   let value = localStorage.getItem('cookies-privacy');
@@ -19,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (decline) {
     decline.addEventListener('click', () => {
       localStorage.setItem('cookies-privacy', false);
+      container.style.display = 'none';
+    });
+  }
+
+  if (close) {
+    close.addEventListener('click', () => {
       container.style.display = 'none';
     });
   }

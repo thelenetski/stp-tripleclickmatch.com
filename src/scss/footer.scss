@@ -2,102 +2,73 @@
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  background-color: #110a16;
+  background-color: #071b38;
 
   @include media(desktop) {
     position: relative;
-    max-width: 1200px;
-    padding-bottom: 62px;
+    max-width: 1440px;
   }
 }
-
-.line {
-  display: block;
-  align-items: center;
-  width: 100vw;
-  max-width: 375px;
-  height: 4px;
-  background: #d58d00;
-  padding: 0;
-  margin: 0 auto;
-
-  @include media(desktop) {
-    max-width: 1200px;
-  }
-}
-
 .footer-wrap {
-  margin-top: 16px;
-
-}
-
-.footer-logo {
-  width: 98px;
-  height: 36px;
-  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @include media(desktop) {
-    width: 312px;
-    height: 113px;
-    position: absolute;
-    left: 420px;
-    top: 62px;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 177px;
+    padding: 0;
   }
 }
-
 .content-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.text-list {
+.footer-list {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 16px;
-  padding-bottom: 16px;
-
-  @include media(desktop) {
-    margin-top: 62px;
-  }
 }
 
 .footer-text {
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
   font-size: 12px;
-  color: #fbfbfb;
 
   @include media(desktop) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
-.gp-img {
+.footer-text::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 14px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: #ffffff;
 
   @include media(desktop) {
-    content: url("/img/gp-img-desktop.png");
-    width: 262px;
-    height: 62px;
+    height: 16px;
   }
-  @include media(desktop) {
-    @media (min-resolution: 2dppx) {
-      content: url("/img/gp-img-desktop@2x.png");
-    }
-  }
+}
+
+.list-item:last-child .footer-text::after {
+  display: none;
 }
 
 .rights-text {
-  display: none;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  margin-top: 28px;
 
   @include media(desktop) {
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #fbfbfb;
-    text-align: center;
-    margin-top: 57px;
-
+    margin-top: 0;
   }
 }

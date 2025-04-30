@@ -1,152 +1,149 @@
 .reviewsWrap {
   display: flex;
   flex-direction: column;
-  background: #110a16;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: #0142a2;
+  position: relative;
+  overflow: hidden;
+  z-index: -2;
 
   @include media(desktop) {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 }
 
 .reviewsTitle {
-  font-family: var(--second-family);
-  font-weight: 600;
-  font-size: 26px;
-  color: #d58d00;
-  margin: 16px 0;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+  margin-bottom: 37px;
 
   @include media(desktop) {
-    font-size: 40px;
-    margin: 0 0 42px 0;
+    font-size: 52px;
+    line-height: 60px;
+    margin-bottom: 100px;
   }
 }
 
-.reviewsList {
+.reviewsUsersWrap {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 68px;
+  margin-top: 40px;
+
+  @include media(desktop) {
+    width: 806px;
+    height: 440px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 64px 0;
+    margin: 0 auto;
+  }
 }
 
 .reviewBox {
+  padding: 0 25px 30px;
+  background-color: #ffffff;
+  border: 2px solid #5ab4e4;
+  box-shadow: 0 9px 27px #d7e4f980;
+  border-radius: 10px;
+
+  @include media(desktop) {
+    width: 367px;
+  }
+}
+
+.reviewContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
-
-  @include media(desktop) {
-    gap: 24px;
-  }
-}
-
-.reviewBox:nth-child(2n) {
-  @include media(desktop) {
-    justify-content: flex-end;
-  }
-}
-
-.first {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  order: 1;
-
-  @include media(desktop) {
-    justify-content: flex-end;
-  }
-}
-
-.first span {
-  text-align: right;
-}
-
-.second {
-  order: 2;
-}
-
-.reviewBox img {
-  width: 50%;
-
-  @include media(desktop) {
-    width: 167px;
-  }
-}
-
-.reviewDescr {
-  width: 50%;
-
-  @include media(desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    gap: 0 24px;
-    width: 548px;
-  }
-}
-
-.reverse {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-
-  @include media(desktop) {
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 24px;
-  }
-}
-
-.reviewBox p,
-.reviewBox span {
-  color: #fbfbfb;
-
-  @include media(desktop) {
-    text-wrap: balance;
-  }
-}
-
-.reviewBox p {
-  font-family: var(--second-family);
-  font-weight: 500;
-  font-size: 14px;
-
-  @include media(desktop) {
-    font-size: 32px;
-  }
-}
-
-.stars {
-  display: flex;
-  gap: 5.5px;
-  margin-bottom: 8px;
-  height: 22px;
-
-  @include media(desktop) {
-    gap: 8px;
-    height: 32px;
-    margin-bottom: 0;
-  }
-}
-
-.stars img {
-  width: 22px;
-  height: 22px;
-
-  @include media(desktop) {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-.reviewBox span {
-  font-family: var(--first-family);
+  justify-content: center;
+  gap: 20px;
+  margin-top: -40px;
+  color: #1d1d1d;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.reviewsUserName {
+  font-weight: 600;
+}
+
+.reviewsBgWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.reviewsBgObject1 {
+  width: 100px;
+  position: absolute;
+  top: 15%;
+  left: -3%;
 
   @include media(desktop) {
-    margin-top: 8px;
+    width: 252px;
+    top: 7%;
+    left: 12%;
+  }
+}
+
+.reviewsBgObject2 {
+  width: 180px;
+  position: absolute;
+  bottom: 12%;
+  left: -17%;
+
+  @include media(desktop) {
+    width: 220px;
+    top: 23%;
+    left: 2%;
+  }
+}
+
+.reviewsBgObject3 {
+  width: 120px;
+  position: absolute;
+  bottom: 2%;
+  left: -7%;
+
+  @include media(desktop) {
+    width: 210px;
+    bottom: 12%;
+    left: 4%;
+  }
+}
+
+.reviewsBgObject4 {
+  width: 111px;
+  position: absolute;
+  top: 8%;
+  right: -3%;
+
+  @include media(desktop) {
+    width: 212px;
+    top: 9%;
+    right: 5%;
+  }
+}
+
+.reviewsBgObject5 {
+  width: 84px;
+  position: absolute;
+  top: 22%;
+  right: -7%;
+
+  @include media(desktop) {
+    width: 160px;
+    top: 50%;
+    right: 2%;
   }
 }
